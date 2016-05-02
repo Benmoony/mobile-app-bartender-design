@@ -1,5 +1,6 @@
 package com.example.benjamin.bartender;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -26,9 +27,19 @@ public class MainActivity extends AppCompatActivity {
                 int color = getColour(clickx,clicky);
                 //ToDo: Execute activity Dependant on Color
 
-                if(color == -9301727){
+
+                Intent menuIntent;
+                if(color == -9301727) {
+
+                    menuIntent = new Intent(getApplicationContext(), Recipies.class);
 
                 }
+                else{
+                    menuIntent = new Intent(getApplicationContext(), LoginActivity.class);
+                }
+
+                startActivity(menuIntent);
+
             }
         });
     }
@@ -41,8 +52,6 @@ public class MainActivity extends AppCompatActivity {
         img.setDrawingCacheEnabled(false);
         return hotspots.getPixel(x, y);
     }
-
-
 
 
 }
