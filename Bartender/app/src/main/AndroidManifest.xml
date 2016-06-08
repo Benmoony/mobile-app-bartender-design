@@ -19,6 +19,16 @@
         </activity>
         <activity android:name=".Recipies">
         </activity>
+        <activity android:name=".OldFashioned">
+        </activity>
+        <activity android:name=".Spirits">
+        </activity>
+        <activity android:name=".Ingredients">
+        </activity>
+        <activity android:name=".Bourbon">
+        </activity>
+        <activity android:name=".AddSpirit">
+        </activity>
     </application>
 
 </manifest>

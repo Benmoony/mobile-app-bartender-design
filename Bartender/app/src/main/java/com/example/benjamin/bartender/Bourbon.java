@@ -3,26 +3,26 @@ package com.example.benjamin.bartender;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ListView;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
 /**
- * Created by Benjamin on 5/2/2016.
+ * Created by Benjamin on 6/8/2016.
  */
-public class Recipies extends AppCompatActivity {
+public class Bourbon extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.recipies);
+        setContentView(R.layout.bour_layout);
 
         ListView recipeList= (ListView)findViewById(R.id.listView);
 
         ArrayAdapter<String> listAdapter = new ArrayAdapter<String>(this,
                 R.layout.recipe_list_item,
                 R.id.listitemText,
-                RecipeData.List);
+                BourbonData.List);
 
         recipeList.setAdapter(listAdapter);
 
@@ -30,14 +30,15 @@ public class Recipies extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Intent recipeInfo = new Intent(Recipies.this, OldFashioned.class);
+                Intent recipeInfo = new Intent(Bourbon.this, OldFashioned.class);
                 startActivity(recipeInfo);
             }
         });
-
-
-
-
-
+    }
+    public void addSpirit(View view)
+    {
+        Intent intent = new Intent(Bourbon.this, AddSpirit.class);
+        startActivity(intent);
     }
 }
+

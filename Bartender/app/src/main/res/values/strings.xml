@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Bartender</string>
+    <string name="old_ingredients">1/2 oz Bourbon or Rye Whiskey\n 2 Dashes Angostura Bitters\n 1 Sugar Cube\n Few Dashes plain water</string>
+    <string name="old_method">	Place sugar cube in old fashioned glass and saturate with bitters, add a dash of plain water.\n\nMuddle until dissolved.\n\n Fill the glass with ice cubes and add whiskey.\n\n Garnish with orange twist, and a cocktail cherry.</string>
 </resources>

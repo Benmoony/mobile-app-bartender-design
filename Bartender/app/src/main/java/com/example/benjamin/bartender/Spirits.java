@@ -3,41 +3,37 @@ package com.example.benjamin.bartender;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ListView;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
+
 
 /**
- * Created by Benjamin on 5/2/2016.
+ * Created by Benjamin on 6/7/2016.
  */
-public class Recipies extends AppCompatActivity {
+public class Spirits extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.recipies);
+        setContentView(R.layout.spirits_layout);
 
-        ListView recipeList= (ListView)findViewById(R.id.listView);
+        ListView spiritsList= (ListView)findViewById(R.id.listView);
 
         ArrayAdapter<String> listAdapter = new ArrayAdapter<String>(this,
                 R.layout.recipe_list_item,
                 R.id.listitemText,
-                RecipeData.List);
+                SpiritsData.List);
 
-        recipeList.setAdapter(listAdapter);
+        spiritsList.setAdapter(listAdapter);
 
-        recipeList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        spiritsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Intent recipeInfo = new Intent(Recipies.this, OldFashioned.class);
+                Intent recipeInfo = new Intent(Spirits.this, Bourbon.class);
                 startActivity(recipeInfo);
             }
         });
-
-
-
-
-
     }
 }

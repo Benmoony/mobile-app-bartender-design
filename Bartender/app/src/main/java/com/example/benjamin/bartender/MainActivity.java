@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
@@ -14,8 +15,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         //ToDo: Find view by ID of imageview
-        ImageView buttonsys = (ImageView) findViewById(R.id.CentralButton);
+        /*ImageView buttonsys = (ImageView) findViewById(R.id.CentralButton);
         //ToDo: then create the onclick event handler
         buttonsys.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,9 +41,8 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 startActivity(menuIntent);
-
             }
-        });
+        });*/
     }
 
     private int getColour(int x, int y)
@@ -52,6 +53,26 @@ public class MainActivity extends AppCompatActivity {
         img.setDrawingCacheEnabled(false);
         return hotspots.getPixel(x, y);
     }
+
+    public void sendRecipe(View view)
+    {
+        Intent intent = new Intent(MainActivity.this, Recipies.class);
+        startActivity(intent);
+    }
+
+    public void sendSpirits(View view)
+    {
+        Intent intent = new Intent(MainActivity.this, Spirits.class);
+        startActivity(intent);
+    }
+
+    public void sendIngredients(View view)
+    {
+        Intent intent = new Intent(MainActivity.this, Bourbon.class);
+        startActivity(intent);
+    }
+
+
 
 
 }

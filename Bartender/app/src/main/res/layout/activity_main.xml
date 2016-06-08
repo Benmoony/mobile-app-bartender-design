@@ -29,4 +29,36 @@
         android:layout_marginTop="121dp"
         android:layout_alignParentTop="true" />
 
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recipes"
+        android:id="@+id/recipebtn"
+        android:onClick="sendRecipe"
+        android:layout_marginTop="153dp"
+        android:layout_alignTop="@+id/CentralButton"
+        android:layout_alignEnd="@+id/CentralButton" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingredients"
+        android:onClick="sendIngredients"
+        android:id="@+id/ingredientbtn"
+        android:layout_alignBottom="@+id/CentralButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="41dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spirits"
+        android:onClick="sendSpirits"
+        android:id="@+id/spiritsbtn"
+        android:layout_alignTop="@+id/recipebtn"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>
