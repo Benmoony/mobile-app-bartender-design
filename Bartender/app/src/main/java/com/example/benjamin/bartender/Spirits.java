@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
  * Created by Benjamin on 6/7/2016.
  */
 public class Spirits extends AppCompatActivity {
+    //creates list of Spirits for user to pull from.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

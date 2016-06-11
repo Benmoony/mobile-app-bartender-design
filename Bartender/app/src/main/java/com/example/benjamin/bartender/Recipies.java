@@ -12,6 +12,7 @@ import android.widget.ListView;
  * Created by Benjamin on 5/2/2016.
  */
 public class Recipies extends AppCompatActivity {
+    //Creates list of recipes for the user to pull from
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

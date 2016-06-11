@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
+    //This class is the main screen of the app and takes care of the navigation and direction the user takes to each of the apps functions
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
